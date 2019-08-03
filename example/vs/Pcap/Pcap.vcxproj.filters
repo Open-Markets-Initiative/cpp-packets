@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\pcap">
+      <UniqueIdentifier>{0bf74183-d82e-43d3-93be-1ad502f04131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\order">
+      <UniqueIdentifier>{c3c03bc8-7cc3-4caa-8159-fb830e60f843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ethernet">
+      <UniqueIdentifier>{a1cfcb4a-c6c5-4a5c-8e71-200d9f90a762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ipv4">
+      <UniqueIdentifier>{88cb77e0-c0d4-40b2-b047-a3bd9f17d0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mac">
+      <UniqueIdentifier>{ba531f75-5f9b-479c-8a49-6a89ca6e59a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vlan">
+      <UniqueIdentifier>{f80c85f8-07b0-469b-bc3d-efffb0c0a801}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\file">
+      <UniqueIdentifier>{47c58092-b0f3-48d0-b96f-e71f5a675f0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\packet">
+      <UniqueIdentifier>{6b11c9fe-6353-4107-81ce-2c8dc8649995}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\pcap\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\omi\packet\pcap\frame.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\header.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\length.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\link.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\magic.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\timestamp.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\version.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\order\endian.hpp">
+      <Filter>Header Files\order</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\packet.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ethernet\type.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\mac\address.hpp">
+      <Filter>Header Files\mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\vlan\tci.hpp">
+      <Filter>Header Files\vlan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ethernet\header.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\stream.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\reader.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\file.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\length.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ethernet\info.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\info.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\fragment.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\service.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\identification.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\ttl.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file\paths.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file\basic.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file\mode.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file\linux.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file\windows.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mapped\file.hpp">
+      <Filter>Header Files\file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\protocol.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\vlan\tag.hpp">
+      <Filter>Header Files\vlan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\header.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\mmap.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\ipv4\address.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\definitions.hpp">
+      <Filter>Header Files\packet</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
