@@ -33,6 +33,9 @@
     <Filter Include="Header Files\packet">
       <UniqueIdentifier>{6b11c9fe-6353-4107-81ce-2c8dc8649995}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\udp">
+      <UniqueIdentifier>{5e129d69-045d-4fdd-996c-80ca4b395a91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\pcap\main.cpp">
@@ -144,6 +147,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\definitions.hpp">
       <Filter>Header Files\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\udp\length.hpp">
+      <Filter>Header Files\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\udp\port.hpp">
+      <Filter>Header Files\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\udp\header.hpp">
+      <Filter>Header Files\udp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

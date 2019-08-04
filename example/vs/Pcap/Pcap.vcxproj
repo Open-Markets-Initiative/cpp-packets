@@ -155,6 +155,9 @@
     <ClInclude Include="..\..\..\omi\packet\pcap\stream.hpp" />
     <ClInclude Include="..\..\..\omi\packet\pcap\timestamp.hpp" />
     <ClInclude Include="..\..\..\omi\packet\pcap\version.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\udp\header.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\udp\length.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\udp\port.hpp" />
     <ClInclude Include="..\..\..\omi\packet\vlan\tag.hpp" />
     <ClInclude Include="..\..\..\omi\packet\vlan\tci.hpp" />
   </ItemGroup>
