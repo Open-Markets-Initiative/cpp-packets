@@ -61,7 +61,7 @@ struct mmap {
     using reference = value_type&;
     using const_reference = const value_type&;
     using pointer = value_type*;
-    using const_pointer = value_type* const;
+    using const_pointer = const value_type*;
 
     static_assert(sizeof(byte_type) == sizeof(char), "byte type must be the same size as char");
 
@@ -299,7 +299,7 @@ struct mmap {
 
     // Is handle valid?
     static bool valid(const handle_type handle) noexcept {
-        return handle != INVALID_HANDLE_VALUE;
+        return handle != INVALID_HANDLE_VALUE and handle != nullptr;
     }
 
     // Clear data members

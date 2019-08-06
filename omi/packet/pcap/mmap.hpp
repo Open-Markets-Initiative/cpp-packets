@@ -5,7 +5,7 @@
 #include <omi/packet/pcap/packet.hpp>
 #include <omi/mapped/file.hpp>
 
-// Pcap packets
+// Mapped pcap file
 
 namespace omi::pcap {
 
@@ -18,13 +18,15 @@ struct map { // need to think about this name
 
       // construction
 
-        explicit frame_iterator(mmap::const_pointer & begin) {
+        // start at beginning of pcap file 
+        explicit frame_iterator(mmap::const_pointer begin) {
             auto current = begin;
             pcap::header::advance(current);
             frame = pcap::frame::parse(current);
         }
 
-        explicit frame_iterator(mmap::const_pointer & begin, const size_t length) {
+        // determine end from beginning of file and length
+        explicit frame_iterator(mmap::const_pointer begin, const size_t length) {
             frame = pcap::frame::parse(begin + length);
         }
 
@@ -60,7 +62,7 @@ struct map { // need to think about this name
         // Check that file is pcap
         const auto pcap = pcap::header::parse(file.data());
         if (not pcap->valid()) {
-            throw std::invalid_argument("File is not pcap");
+            throw std::invalid_argument("File is not standard pcap format");
         }
         // add string/filesystem template
     }
@@ -70,13 +72,13 @@ struct map { // need to think about this name
 
 //https://stackoverflow.com/questions/7758580/writing-your-own-stl-container/7759622#7759622
 
-    // Returns an iterator to the first requested byte or cend()
-    frame_iterator begin() const noexcept {
+    // Returns an iterator to the first requested packet frame
+    [[nodiscard]] frame_iterator begin() const noexcept {
         return frame_iterator(file.data());
     }
 
-    // Returns an iterator after the last requested byte
-    frame_iterator end() const noexcept {
+    // Returns an iterator to mapped byte directly after last frame
+    [[nodiscard]] frame_iterator end() const noexcept {
         return frame_iterator(file.data(), file.length()); // hack use begin/end
     }
 };

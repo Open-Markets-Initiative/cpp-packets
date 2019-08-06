@@ -24,12 +24,8 @@ struct port {
     explicit port(const type &value)
       : value{ value } {}
 
-    // ip const char* containing the dotted-notation address.
-    //address(const char* ip = nullptr);
-
-    //address(const std::string& ip);
-
-    explicit operator type() const {
+    // Return underlying value
+    type get() const {
         return value;
     }
 
@@ -46,11 +42,11 @@ inline std::ostream& operator<<(std::ostream& out, const port& port) {
 
 namespace std {
 
-// std hash
+// std hash for udp port
 template<> 
 struct hash<omi::udp::port> {
     size_t operator()(const omi::udp::port& port) const noexcept {
-        return std::hash<omi::udp::port::type>()(port);
+        return std::hash<omi::udp::port::type>()(port.get());
     }
 };
 
