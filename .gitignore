@@ -329,10 +329,8 @@ ASALocalRun/
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
 
-# C
+# Cmake 
 *cmake-build-debug/
-
-#Cmake 
 *CMakeCache.txt
 *CMakeFiles
 *CTestTestfile.cmake

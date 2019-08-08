@@ -34,7 +34,7 @@ struct header {
   //// Methods //////////////
 
     // Is packet valid?
-    size_t valid() const {
+    bool valid() const {
         return true;
     }
 

@@ -5,35 +5,46 @@
 #include <ostream>
 #include <iso646.h>
 
-// Pcap length/size
+// Pcap file magic number
 
 namespace omi::pcap {
 
 struct magic {
     using type = uint32_t;
 
-    static constexpr type number = 0xa1b2c3d4;
+    static constexpr type micros = 0xa1b2c3d4;
+    static constexpr type nanos = 0xa1b23c4d;
 
   ///// Construction //////////////
 
     // Default constructor
-    magic()
-      : value{ number } {}
+    constexpr magic() noexcept
+      : value{ micros } {}
 
     // Standard constructor
-    explicit magic(const type &value)
+    constexpr explicit magic(const type &value)
       : value{ value } {}
 
   ///// Methods ///////////////////
 
     // Return underlying value
-    type get() const {
+    [[nodiscard]] type get() const {
         return value;
     }
 
     // Is magic number valid?
-    bool valid() const {
-        return value == number;
+    [[nodiscard]] bool valid() const {
+        return value == micros or value == nanos;
+    }
+
+    // Are pcap timestamps in microseconds?
+    [[nodiscard]] bool microseconds() const {
+        return value == micros ;
+    }
+
+    // Are pcap timestamps in nanoseconds?
+    [[nodiscard]] bool nanoseconds() const {
+        return value == nanos;
     }
 
   //// Properties /////////////////

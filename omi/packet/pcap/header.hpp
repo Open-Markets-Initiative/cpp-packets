@@ -19,7 +19,7 @@ struct header {
 
   //// Fields ///////////////
 
-    pcap::magic magic;             // Pcap identifier
+    pcap::magic magic;             // Pcap identifier (also timestamp precision
     pcap::version version;         // Header version
     pcap::timestamp timestamp;     // Usually unused (0)
     pcap::length max;              // Max packet length 
