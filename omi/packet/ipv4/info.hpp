@@ -35,7 +35,7 @@ struct info  {
 
     // Returns ipv4 header
     [[nodiscard]] constexpr std::uint32_t header() const {
-        return static_cast<std::uint32_t>(value & mask::header);
+        return static_cast<std::uint32_t>(value & mask::header) * 4; // make optimized version
     }
 
     // Returns ipv4 version
