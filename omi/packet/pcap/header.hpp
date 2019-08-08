@@ -19,7 +19,7 @@ struct header {
 
   //// Fields ///////////////
 
-    pcap::magic magic;             // Pcap identifier (also timestamp precision
+    pcap::magic magic;             // Pcap identifier (also timestamp precision)
     pcap::version version;         // Header version
     pcap::timestamp timestamp;     // Usually unused (0)
     pcap::length max;              // Max packet length 
@@ -28,14 +28,16 @@ struct header {
   //// Methods //////////////
 
     // Is valid pcap file
-    bool valid() const noexcept {
+    [[nodiscard]] bool valid() const noexcept {
         return magic.valid();
     }
 
     // Is ethernet file?
-    bool ethernet() const noexcept { // Is this valuable?
-        return valid() and link == link::ethernet;
+    [[nodiscard]] bool ethernet() const noexcept {
+        return valid() and link.ethernet();
     }
+
+  //// Decode ///////////////
 
     // Read byte stream as pcap file header
     static const header* parse(const std::byte* buffer) {

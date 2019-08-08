@@ -14,7 +14,7 @@ struct length {
   ///// Construction //////////////
 
     // Default constructor
-    length()
+    constexpr length() noexcept
       : value{ 0 } {}
 
     // Standard constructor
@@ -24,8 +24,8 @@ struct length {
   ///// Methods ///////////////////
 
     // Return value
-    underlying_type get() const {
-        return value; // Might be an issue with types
+    [[nodiscard]] underlying_type get() const {
+        return value;
     }
 
   //// Properties /////////////////

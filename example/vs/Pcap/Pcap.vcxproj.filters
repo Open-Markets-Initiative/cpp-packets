@@ -157,5 +157,8 @@
     <ClInclude Include="..\..\..\omi\packet\udp\header.hpp">
       <Filter>Header Files\udp</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\pcap\type.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -49,7 +49,7 @@ struct file { // need to think about this name
 
     // Is ethernet file?
     bool ethernet() const {
-        return valid() and header.link == link::ethernet;
+        return valid() and header.link.ethernet();
     }
 };
 
