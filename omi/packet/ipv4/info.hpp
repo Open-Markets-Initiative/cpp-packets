@@ -34,13 +34,13 @@ struct info  {
   ///// Methods ///////////////////
 
     // Returns ipv4 header
-    constexpr std::uint32_t header() const {
+    [[nodiscard]] constexpr std::uint32_t header() const {
         return static_cast<std::uint32_t>(value & mask::header);
     }
 
     // Returns ipv4 version
-    constexpr std::uint32_t version() const {
-        return static_cast<std::uint32_t>(value & mask::version);
+    [[nodiscard]] constexpr std::uint32_t version() const {
+        return static_cast<std::uint32_t>(value & mask::version) >> 4;
     }
 };
 
