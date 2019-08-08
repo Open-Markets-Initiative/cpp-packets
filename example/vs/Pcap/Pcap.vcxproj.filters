@@ -12,9 +12,6 @@
     <Filter Include="Header Files\pcap">
       <UniqueIdentifier>{0bf74183-d82e-43d3-93be-1ad502f04131}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\order">
-      <UniqueIdentifier>{c3c03bc8-7cc3-4caa-8159-fb830e60f843}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\ethernet">
       <UniqueIdentifier>{a1cfcb4a-c6c5-4a5c-8e71-200d9f90a762}</UniqueIdentifier>
     </Filter>
@@ -35,6 +32,9 @@
     </Filter>
     <Filter Include="Header Files\udp">
       <UniqueIdentifier>{5e129d69-045d-4fdd-996c-80ca4b395a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\endian">
+      <UniqueIdentifier>{895efef2-b918-4a9d-b281-631cad97fd75}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +63,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\pcap\version.hpp">
       <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\order\endian.hpp">
-      <Filter>Header Files\order</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\pcap\packet.hpp">
       <Filter>Header Files\pcap</Filter>
@@ -159,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\pcap\type.hpp">
       <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\endian\swap.hpp">
+      <Filter>Header Files\endian</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

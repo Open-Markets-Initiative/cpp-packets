@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <ostream>
 
-#include <omi/packet/order/endian.hpp>
+#include <omi/packet/endian/swap.hpp>
 
 // Pcap length/size
 
@@ -16,18 +16,18 @@ struct length {
   ///// Construction //////////////
 
     // Default constructor
-    length()
+    constexpr length() noexcept
       : value{ 0 } {}
 
     // Standard constructor
-    explicit length(const type &number)
+    explicit constexpr length(const type &number)
       : value{ number } {}
 
   ///// Methods ///////////////////
 
     // Return value
-    type get() const {
-        return endian::little(value);
+    [[nodiscard]] type get() const {
+        return endian::swap(value);
     }
 
   //// Properties /////////////////

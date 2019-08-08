@@ -1,10 +1,8 @@
 #ifndef OMI_ETHERNET_INFO_HPP_
 #define OMI_ETHERNET_INFO_HPP_
 
-#include <omi/packet/order/endian.hpp>
+#include <omi/packet/endian/swap.hpp>
 #include <omi/packet/ethernet/type.hpp>
-
-#include <cstdint>
 
 // Ethernet Info (Type or Size)
 
@@ -28,29 +26,29 @@ struct info {
   ///// Methods ///////////////////
 
     // Return value
-    underlying_type get() const {
-        return endian::little(value);
+    [[nodiscard]] underlying_type get() const {
+        return endian::swap(value);
     }
 
   //// Properties /////////////////
 
-    size_t bytes() const {
+    [[nodiscard]] size_t bytes() const { // is size_t right?
         const auto translation = get();
         return translation <= 1500 ? translation : 0;
     }
 
-    underlying_type type() const {
+    [[nodiscard]] underlying_type type() const {
         const auto translation = get();
         return translation > 1500 ? translation : 0; // return a made up type
     }
 
     // Is ethernet type vlan?
-    bool vlan() const {
+    [[nodiscard]] bool vlan() const {
         return value == big::endian::type::vlan;
     }
 
     // Is ethernet type ipv4?
-    bool ipv4() const {
+    [[nodiscard]] bool ipv4() const {
         return value == big::endian::type::ipv4;
     }
 };
