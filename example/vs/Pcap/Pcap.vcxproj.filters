@@ -36,6 +36,9 @@
     <Filter Include="Header Files\endian">
       <UniqueIdentifier>{895efef2-b918-4a9d-b281-631cad97fd75}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\byte">
+      <UniqueIdentifier>{3f64186f-0917-4d0f-84a8-24a0cafebfd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\pcap\main.cpp">
@@ -159,6 +162,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\endian\swap.hpp">
       <Filter>Header Files\endian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\byte\array.hpp">
+      <Filter>Header Files\byte</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
