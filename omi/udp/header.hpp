@@ -1,8 +1,8 @@
 #ifndef OMI_UDP_HEADER_HPP_
 #define OMI_UDP_HEADER_HPP_
 
-#include <omi/packet/udp/port.hpp>
-#include <omi/packet/udp/length.hpp>
+#include <omi/udp/port.hpp>
+#include <omi/udp/length.hpp>
 
 // Udp header
 

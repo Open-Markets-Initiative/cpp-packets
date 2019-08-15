@@ -1,7 +1,7 @@
 #ifndef OMI_PCAP_STREAM_HPP_
 #define OMI_PCAP_STREAM_HPP_
 
-#include <omi/packet/pcap/packet.hpp>
+#include <omi/pcap/packet.hpp>
 
 #include <fstream>
 

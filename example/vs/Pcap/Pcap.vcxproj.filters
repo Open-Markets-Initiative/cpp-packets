@@ -43,72 +43,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\omi\packet\pcap\frame.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\header.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\length.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\link.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\magic.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\timestamp.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\version.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\packet.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ethernet\type.hpp">
-      <Filter>Header Files\ethernet</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\mac\address.hpp">
-      <Filter>Header Files\mac</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\vlan\tci.hpp">
-      <Filter>Header Files\vlan</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ethernet\header.hpp">
-      <Filter>Header Files\ethernet</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\stream.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\reader.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\file.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\length.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ethernet\info.hpp">
-      <Filter>Header Files\ethernet</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\info.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\fragment.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\service.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\identification.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\ttl.hpp">
-      <Filter>Header Files\ipv4</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\omi\mapped\file\paths.hpp">
       <Filter>Header Files\file</Filter>
     </ClInclude>
@@ -127,44 +61,116 @@
     <ClInclude Include="..\..\..\omi\mapped\file.hpp">
       <Filter>Header Files\file</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\protocol.hpp">
+    <ClInclude Include="..\..\..\omi\byte\array.hpp">
+      <Filter>Header Files\byte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\byte\crc.hpp">
+      <Filter>Header Files\byte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\byte\swap.hpp">
+      <Filter>Header Files\byte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ethernet\frame.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ethernet\header.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ethernet\info.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ethernet\stack.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ethernet\type.hpp">
+      <Filter>Header Files\ethernet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\address.hpp">
       <Filter>Header Files\ipv4</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\vlan\tag.hpp">
-      <Filter>Header Files\vlan</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\header.hpp">
+    <ClInclude Include="..\..\..\omi\ipv4\fragment.hpp">
       <Filter>Header Files\ipv4</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\mmap.hpp">
-      <Filter>Header Files\pcap</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\ipv4\address.hpp">
+    <ClInclude Include="..\..\..\omi\ipv4\header.hpp">
       <Filter>Header Files\ipv4</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\definitions.hpp">
+    <ClInclude Include="..\..\..\omi\ipv4\identification.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\info.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\length.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\protocol.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\service.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\ttl.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\mac\address.hpp">
+      <Filter>Header Files\mac</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\definitions.hpp">
       <Filter>Header Files\packet</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\udp\length.hpp">
-      <Filter>Header Files\udp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\udp\port.hpp">
-      <Filter>Header Files\udp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\udp\header.hpp">
-      <Filter>Header Files\udp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\pcap\type.hpp">
+    <ClInclude Include="..\..\..\omi\pcap\file.hpp">
       <Filter>Header Files\pcap</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\byte\array.hpp">
-      <Filter>Header Files\byte</Filter>
+    <ClInclude Include="..\..\..\omi\pcap\frame.hpp">
+      <Filter>Header Files\pcap</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\byte\swap.hpp">
-      <Filter>Header Files\byte</Filter>
+    <ClInclude Include="..\..\..\omi\pcap\header.hpp">
+      <Filter>Header Files\pcap</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\byte\crc.hpp">
-      <Filter>Header Files\byte</Filter>
+    <ClInclude Include="..\..\..\omi\pcap\length.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\link.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\magic.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\mmap.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\packet.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\reader.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\stream.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\timestamp.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\type.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\version.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\udp\header.hpp">
+      <Filter>Header Files\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\udp\length.hpp">
+      <Filter>Header Files\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\udp\port.hpp">
+      <Filter>Header Files\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\vlan\tag.hpp">
+      <Filter>Header Files\vlan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\vlan\tci.hpp">
+      <Filter>Header Files\vlan</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

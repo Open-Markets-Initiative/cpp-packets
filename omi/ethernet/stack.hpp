@@ -1,11 +1,12 @@
 #ifndef OMI_ETHERNET_STACK_HPP_
 #define OMI_ETHERNET_STACK_HPP_
 
-#include <omi/packet/ethernet/type.hpp>
-
 #include <ostream>
 #include <iso646.h>
-#include "omi/packet/order/endian.hpp"
+
+#include <omi/ethernet/type.hpp>
+#include <omi/byte/swap.hpp>
+
 
 // Ethernet Info (Type or Size)
 

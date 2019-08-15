@@ -1,13 +1,12 @@
 #ifndef OMI_ETHERNET_FRAME_HPP_
 #define OMI_ETHERNET_FRAME_HPP_
 
-#include <omi/packet/mac/address.hpp>
-#include <omi/packet/ethernet/info.hpp>
+#include <omi/mac/address.hpp>
+#include <omi/ethernet/info.hpp>
 
 // Ethernet frame
 
-namespace omi {
-namespace ethernet {
+namespace omi::ethernet {
 
 #pragma pack(push, 1)
 
@@ -48,10 +47,10 @@ struct frame { // Rename this header
 // Stream operator
 inline std::ostream &operator<<(std::ostream &out, const frame &frame) {
     return out << "ethernet" << std::endl
-               << "  destnation " << frame.destination << std::endl
-               << "  source     " << frame.source;
+               << "  destination " << frame.destination << std::endl
+               << "  source      " << frame.source;
 }
 
-} }
+}
 
 #endif

@@ -1,8 +1,8 @@
 #ifndef OMI_ETHERNET_HEADER_HPP_
 #define OMI_ETHERNET_HEADER_HPP_
 
-#include <omi/packet/mac/address.hpp>
-#include <omi/packet/ethernet/info.hpp>
+#include <omi/mac/address.hpp>
+#include <omi/ethernet/info.hpp>
 
 // Ethernet frame header
 

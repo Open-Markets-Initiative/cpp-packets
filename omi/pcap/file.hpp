@@ -1,13 +1,13 @@
 #ifndef OMI_PCAP_FILE_HPP_
 #define OMI_PCAP_FILE_HPP_
 
-#include <omi/packet/pcap/header.hpp>
-#include <omi/packet/pcap/packet.hpp>
-#include <omi/packet/pcap/stream.hpp>
-
 #include <ostream>
 #include <fstream>
 #include <vector>
+
+#include <omi/pcap/header.hpp>
+#include <omi/pcap/packet.hpp>
+#include <omi/pcap/stream.hpp>
 
 // Pcap packets
 

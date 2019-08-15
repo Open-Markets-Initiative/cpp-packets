@@ -1,8 +1,8 @@
 #include "catch.hpp"
 
-#include <omi/packet/byte/array.hpp>
-#include <omi/packet/pcap/header.hpp>
-#include <omi/packet/pcap/frame.hpp>
+#include <omi/byte/array.hpp>
+#include <omi/pcap/header.hpp>
+#include <omi/pcap/frame.hpp>
 
 TEST_CASE("Verify pcap header value", "[pcap file]") {
 

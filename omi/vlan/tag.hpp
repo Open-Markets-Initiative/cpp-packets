@@ -1,8 +1,8 @@
 #ifndef OMI_VLAN_TAG_HPP_
 #define OMI_VLAN_TAG_HPP_
 
-#include <omi/packet/vlan/tci.hpp>
-#include <omi/packet/ethernet/info.hpp>
+#include <omi/vlan/tci.hpp>
+#include <omi/ethernet/info.hpp>
 
 // Vlan frame
 

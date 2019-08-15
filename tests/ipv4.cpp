@@ -1,7 +1,7 @@
 #include "catch.hpp"
 
-#include <omi/packet/byte/array.hpp>
-#include <omi/packet/ipv4/header.hpp>
+#include <omi/byte/array.hpp>
+#include <omi/ipv4/header.hpp>
 
 TEST_CASE("Verify ipv4 packet length", "[ipv4]") {
 

@@ -3,11 +3,11 @@
 
 #include <cstddef>
 
-#include <omi/packet/pcap/magic.hpp>
-#include <omi/packet/pcap/version.hpp>
-#include <omi/packet/pcap/length.hpp>
-#include <omi/packet/pcap/timestamp.hpp>
-#include <omi/packet/pcap/link.hpp>
+#include <omi/pcap/magic.hpp>
+#include <omi/pcap/version.hpp>
+#include <omi/pcap/length.hpp>
+#include <omi/pcap/timestamp.hpp>
+#include <omi/pcap/link.hpp>
 
 // Pcap file header
 

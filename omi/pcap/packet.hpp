@@ -1,8 +1,9 @@
 #ifndef OMI_PCAP_PACKET_HPP_
 #define OMI_PCAP_PACKET_HPP_
 
-#include <omi/packet/pcap/frame.hpp>
 #include <memory>
+
+#include <omi/pcap/frame.hpp>
 
 // Pcap packet (for persisting packet on heap)
 

@@ -1,8 +1,8 @@
 #ifndef OMI_ETHERNET_INFO_HPP_
 #define OMI_ETHERNET_INFO_HPP_
 
-#include <omi/packet/byte/swap.hpp>
-#include <omi/packet/ethernet/type.hpp>
+#include <omi/byte/swap.hpp>
+#include <omi/ethernet/type.hpp>
 
 // Ethernet Info (Type or Size)
 

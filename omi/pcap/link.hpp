@@ -5,7 +5,7 @@
 #include <ostream>
 #include <iso646.h>
 
-#include <omi/packet/pcap/type.hpp>
+#include <omi/pcap/type.hpp>
 
 // Pcap file magic number
 

@@ -1,8 +1,8 @@
 #ifndef OMI_PCAP_MMAP_HPP_
 #define OMI_PCAP_MMAP_HPP_
 
-#include <omi/packet/pcap/header.hpp>
-#include <omi/packet/pcap/packet.hpp>
+#include <omi/pcap/header.hpp>
+#include <omi/pcap/packet.hpp>
 #include <omi/mapped/file.hpp>
 
 // Mapped pcap file

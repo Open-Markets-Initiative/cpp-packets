@@ -1,4 +1,4 @@
-#include <omi/packet/erf/frame.hpp>
+#include <omi/erf/frame.hpp>
 
 // Placeholder method handling erf later
 

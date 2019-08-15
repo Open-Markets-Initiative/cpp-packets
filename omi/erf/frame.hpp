@@ -1,8 +1,8 @@
 #ifndef OMI_ERF_FRAME_HPP_
 #define OMI_ERF_FRAME_HPP_
 
-#include <omi/packet/erf/timestamp.hpp>
-#include <omi/packet/erf/type.hpp>
+#include <omi/erf/timestamp.hpp>
+#include <omi/erf/type.hpp>
 
 // Erf record type
 

@@ -1,13 +1,13 @@
 #ifndef OMI_IPV4_HEADER_HPP_
 #define OMI_IPV4_HEADER_HPP_
 
-#include <omi/packet/ipv4/info.hpp>
-#include <omi/packet/ipv4/service.hpp>
-#include <omi/packet/ipv4/length.hpp>
-#include <omi/packet/ipv4/identification.hpp>
-#include <omi/packet/ipv4/fragment.hpp>
-#include <omi/packet/ipv4/ttl.hpp>
-#include <omi/packet/ipv4/protocol.hpp>
+#include <omi/ipv4/info.hpp>
+#include <omi/ipv4/service.hpp>
+#include <omi/ipv4/length.hpp>
+#include <omi/ipv4/identification.hpp>
+#include <omi/ipv4/fragment.hpp>
+#include <omi/ipv4/ttl.hpp>
+#include <omi/ipv4/protocol.hpp>
 
 // Ipv4 header
 

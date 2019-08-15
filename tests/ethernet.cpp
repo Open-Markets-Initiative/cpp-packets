@@ -1,7 +1,7 @@
 #include "catch.hpp"
 
-#include <omi/packet/byte/array.hpp>
-#include <omi/packet/ethernet/header.hpp>
+#include <omi/byte/array.hpp>
+#include <omi/ethernet/header.hpp>
 
 TEST_CASE("Verify ethernet info value", "[ethernet]" ) {
 

@@ -1,5 +1,6 @@
-#include <omi/packet/definitions.hpp>
 #include <iostream>
+
+#include <omi/packet/definitions.hpp>
 
 // Parse Pcap.Eth2.Ipv4.Upd Packet
 

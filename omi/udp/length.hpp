@@ -5,7 +5,7 @@
 #include <ostream>
 #include <iso646.h>
 
-#include <omi/packet/order/endian.hpp>
+#include <omi/byte/swap.hpp>
 
 
 namespace omi::udp {
@@ -27,7 +27,7 @@ struct length {
 
     // Return value
     type get() const {
-        return endian::little(value);
+        return byte::swap(value);
     }
 
   //// Properties /////////////////

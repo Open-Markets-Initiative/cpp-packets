@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <ostream>
 
-#include <omi/packet/byte/swap.hpp>
+#include <omi/byte/swap.hpp>
 
 // Pcap length/size
 

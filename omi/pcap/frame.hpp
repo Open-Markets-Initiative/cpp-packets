@@ -1,7 +1,7 @@
 #ifndef OMI_PCAP_FRAME_HPP_
 #define OMI_PCAP_FRAME_HPP_
 
-#include <omi/packet/pcap/timestamp.hpp>
+#include <omi/pcap/timestamp.hpp>
 
 // Pcap frame
 
