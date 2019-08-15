@@ -129,8 +129,9 @@
     <ClInclude Include="..\..\..\omi\mapped\file\paths.hpp" />
     <ClInclude Include="..\..\..\omi\mapped\file\windows.hpp" />
     <ClInclude Include="..\..\..\omi\packet\byte\array.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\byte\crc.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\byte\swap.hpp" />
     <ClInclude Include="..\..\..\omi\packet\definitions.hpp" />
-    <ClInclude Include="..\..\..\omi\packet\endian\swap.hpp" />
     <ClInclude Include="..\..\..\omi\packet\ethernet\header.hpp" />
     <ClInclude Include="..\..\..\omi\packet\ethernet\info.hpp" />
     <ClInclude Include="..\..\..\omi\packet\ethernet\type.hpp" />

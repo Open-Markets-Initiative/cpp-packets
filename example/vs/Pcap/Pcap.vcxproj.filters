@@ -33,9 +33,6 @@
     <Filter Include="Header Files\udp">
       <UniqueIdentifier>{5e129d69-045d-4fdd-996c-80ca4b395a91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\endian">
-      <UniqueIdentifier>{895efef2-b918-4a9d-b281-631cad97fd75}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\byte">
       <UniqueIdentifier>{3f64186f-0917-4d0f-84a8-24a0cafebfd4}</UniqueIdentifier>
     </Filter>
@@ -160,10 +157,13 @@
     <ClInclude Include="..\..\..\omi\packet\pcap\type.hpp">
       <Filter>Header Files\pcap</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\packet\endian\swap.hpp">
-      <Filter>Header Files\endian</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\omi\packet\byte\array.hpp">
+      <Filter>Header Files\byte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\byte\swap.hpp">
+      <Filter>Header Files\byte</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\byte\crc.hpp">
       <Filter>Header Files\byte</Filter>
     </ClInclude>
   </ItemGroup>

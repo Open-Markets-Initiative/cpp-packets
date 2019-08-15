@@ -1,7 +1,7 @@
 #ifndef OMI_ETHERNET_INFO_HPP_
 #define OMI_ETHERNET_INFO_HPP_
 
-#include <omi/packet/endian/swap.hpp>
+#include <omi/packet/byte/swap.hpp>
 #include <omi/packet/ethernet/type.hpp>
 
 // Ethernet Info (Type or Size)
@@ -27,7 +27,7 @@ struct info {
 
     // Return value
     [[nodiscard]] underlying_type get() const {
-        return endian::swap(value);
+        return byte::swap(value);
     }
 
   //// Properties /////////////////

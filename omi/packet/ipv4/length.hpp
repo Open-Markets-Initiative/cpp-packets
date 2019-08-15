@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <ostream>
 
-#include <omi/packet/endian/swap.hpp>
+#include <omi/packet/byte/swap.hpp>
 
 // Pcap length/size
 
@@ -27,7 +27,7 @@ struct length {
 
     // Return value
     [[nodiscard]] type get() const {
-        return endian::swap(value);
+        return byte::swap(value);
     }
 
   //// Properties /////////////////
