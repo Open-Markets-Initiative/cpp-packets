@@ -78,8 +78,8 @@ inline bool operator>=(const ttl& lhs, const ttl& rhs) {
 ///////////////////////////////////////////////
 
 // Stream operator
-inline std::ostream &operator<<(std::ostream &out, const ttl &ttl) {
-    return out << ttl.get();
+inline std::ostream &operator<<(std::ostream &out, const ipv4::ttl &ttl) {
+    return out << "  ttl: " << static_cast<size_t>(ttl.get());
 }
 
 } 

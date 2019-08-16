@@ -18,11 +18,11 @@ struct address {
   ///// Construction //////////////
 
     // Default constructor
-    address()
+    constexpr address()
       : value{ 0 } {}
 
     // Standard constructor
-    explicit address(const type &value)
+    explicit constexpr address(const type &value)
       : value{ value } {}
 
     // ip const char* containing the dotted-notation address.
@@ -30,7 +30,7 @@ struct address {
 
     //address(const std::string& ip);
 
-    explicit operator type() const {
+    [[nodiscard]] type get() const {
         return value;
     }
 
@@ -38,6 +38,10 @@ struct address {
 
 // stream operator
 
+// Stream operator
+inline std::ostream& operator<<(std::ostream& out, const ipv4::address& address) {
+    return out << address.get(); // need good formatting
+}
 
 }
 
@@ -46,8 +50,8 @@ namespace std {
 // std hash
 template<> 
 struct hash<omi::ipv4::address> {
-    size_t operator()(const omi::ipv4::address& address) const {
-        return std::hash<omi::ipv4::address::type>()(address);
+    size_t operator()(const omi::ipv4::address& address) const noexcept {
+        return std::hash<omi::ipv4::address::type>()(address.get());
     }
 };
 

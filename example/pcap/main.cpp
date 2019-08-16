@@ -1,8 +1,6 @@
-#include <iostream>
-
 #include <omi/packet/definitions.hpp>
 
-// Parse Pcap.Eth2.Ipv4.Upd Packet
+// Example: Parse Pcap.Eth2.Ipv4.Upd.Sbe Packet
 
 int main() {
     using namespace omi;
@@ -27,12 +25,22 @@ int main() {
             }
 
             // Parse ipv4 header
-            if (ethtype.ipv4()) {
-                auto ipv4 = ipv4::header::parse(current);
-                std::cout << *ipv4 << std::endl;
+            if (not ethtype.ipv4()) { continue; }
 
-                // Todo: udp
-            }
+            auto ipv4 = ipv4::header::decode(current);
+            std::cout << *ipv4 << std::endl;
+
+            auto ipv4type = ipv4->protocol;
+
+            // Parse udp header
+            if (not ipv4type.udp()) { continue; }
+
+            auto udp = udp::header::parse(current);
+            std::cout << *udp << std::endl;
+
+            // Todo: cme
+
+            std::cout << std::endl;
         }    
     } catch (std::exception &exception) {
         std::cerr << "Error: " << exception.what() << std::endl;

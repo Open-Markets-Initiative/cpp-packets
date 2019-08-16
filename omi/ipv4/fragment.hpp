@@ -34,22 +34,22 @@ struct fragment {
   ///// Methods ///////////////////
 
     // Returns ipv4 reserved fragment flag
-    constexpr bool reserved() const {
+    [[nodiscard]] constexpr bool reserved() const {
         return value & mask::reserved;
     }
 
     // Returns ipv4 don't fragment flag
-    constexpr bool dont() const {
+    [[nodiscard]] constexpr bool dont() const {
         return value & mask::dont;
     }
 
     // Returns ipv4 more fragments flag
-    constexpr bool more() const {
+    [[nodiscard]] constexpr bool more() const {
         return value & mask::more;
     }
 
     // Returns ipv4 fragment offset (does not work)
-    constexpr std::size_t offset() const {
+    [[nodiscard]] constexpr std::size_t offset() const {
         return static_cast<std::size_t>(value & mask::offset);
     }
 };
@@ -62,7 +62,7 @@ inline std::ostream &operator<<(std::ostream &out, const fragment &fragment) {
                << "    reserved: " << fragment.reserved() << std::endl
                << "    dont:     " << fragment.dont() << std::endl
                << "    more:     " << fragment.more() << std::endl
-               << "    offset:   " << fragment.offset() << std::endl;
+               << "    offset:   " << fragment.offset();
 }
 
 }

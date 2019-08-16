@@ -4,6 +4,8 @@
 #include <cstdint>
 #include <ostream>
 
+#include <omi/ipv4/type.hpp>
+
 // Ipv4 protocol
 
 namespace omi::ipv4 {
@@ -24,10 +26,15 @@ struct protocol {
   ///// Methods ///////////////////
 
     // Return value
-    type get() const {
-        return value; // Might be an issue with types
+    [[nodiscard]] type get() const {
+        return value;
     }
 
+    // Is udp protocol
+    [[nodiscard]] bool udp() const {
+        return value == ipv4::type::udp;
+    }
+    
   //// Properties /////////////////
 
   protected:
@@ -46,31 +53,11 @@ inline bool operator!=(const protocol& lhs, const protocol& rhs) {
     return not operator==(lhs, rhs);
 }
 
-// Less than operator
-inline bool operator<(const protocol& lhs, const protocol& rhs) {
-    return lhs.get() < rhs.get();
-}
-
-// Greater than operator
-inline bool operator>(const protocol& lhs, const protocol& rhs) {
-    return operator<(rhs, lhs);
-}
-
-// Less than or equals operator
-inline bool operator<=(const protocol& lhs, const protocol& rhs) {
-    return not operator>(lhs, rhs);
-}
-
-// Greater than or equals operator
-inline bool operator>=(const protocol& lhs, const protocol& rhs) {
-    return not operator<(lhs, rhs);
-}
-
 ///////////////////////////////////////////////
 
 // Stream operator
 inline std::ostream &operator<<(std::ostream &out, const protocol &number) {
-    return out << number.get();
+    return out << "  protocol: " << static_cast<size_t>(number.get());
 }
 
 }

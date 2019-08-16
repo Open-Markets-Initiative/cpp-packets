@@ -14,33 +14,34 @@ struct info  {
 
     using underlying_type = std::uint8_t;
 
-    struct mask {
-        static const underlying_type header = 0x0F;
-        static const underlying_type version = 0xF0;
-    };
+    static const underlying_type header_mask = 0x0F;
+    static const underlying_type version_mask = 0xF0;
 
-    underlying_type value;
+    underlying_type data;
 
   ///// Construction //////////////
 
     // Default constructor
     constexpr info()
-      : value{ 0 } {}
+      : data{ 0 } {} // is this right value?
 
     // Standard constructor
     explicit constexpr info(const underlying_type &value)
-      : value{ value } {}
+      : data{ value } {}
 
   ///// Methods ///////////////////
 
     // Returns ipv4 header
     [[nodiscard]] constexpr std::uint32_t header() const {
-        return static_cast<std::uint32_t>(value & mask::header) * 4; // make optimized version
+        // Optimization for standard no option header
+        if ((data & header_mask) == 5) { return 20; }
+
+        return static_cast<std::uint32_t>(data & header_mask) * 4;
     }
 
     // Returns ipv4 version
     [[nodiscard]] constexpr std::uint32_t version() const {
-        return static_cast<std::uint32_t>(value & mask::version) >> 4;
+        return static_cast<std::uint32_t>(data & version_mask) >> 4;
     }
 };
 

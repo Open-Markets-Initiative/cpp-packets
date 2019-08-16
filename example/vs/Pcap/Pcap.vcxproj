@@ -125,13 +125,13 @@
     <ClInclude Include="..\..\..\omi\byte\array.hpp" />
     <ClInclude Include="..\..\..\omi\byte\crc.hpp" />
     <ClInclude Include="..\..\..\omi\byte\swap.hpp" />
-    <ClInclude Include="..\..\..\omi\definitions.hpp" />
     <ClInclude Include="..\..\..\omi\ethernet\frame.hpp" />
     <ClInclude Include="..\..\..\omi\ethernet\header.hpp" />
     <ClInclude Include="..\..\..\omi\ethernet\info.hpp" />
     <ClInclude Include="..\..\..\omi\ethernet\stack.hpp" />
     <ClInclude Include="..\..\..\omi\ethernet\type.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\address.hpp" />
+    <ClInclude Include="..\..\..\omi\ipv4\checksum.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\fragment.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\header.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\identification.hpp" />
@@ -140,6 +140,7 @@
     <ClInclude Include="..\..\..\omi\ipv4\protocol.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\service.hpp" />
     <ClInclude Include="..\..\..\omi\ipv4\ttl.hpp" />
+    <ClInclude Include="..\..\..\omi\ipv4\type.hpp" />
     <ClInclude Include="..\..\..\omi\mac\address.hpp" />
     <ClInclude Include="..\..\..\omi\mapped\file.hpp" />
     <ClInclude Include="..\..\..\omi\mapped\file\basic.hpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="..\..\..\omi\mapped\file\mode.hpp" />
     <ClInclude Include="..\..\..\omi\mapped\file\paths.hpp" />
     <ClInclude Include="..\..\..\omi\mapped\file\windows.hpp" />
+    <ClInclude Include="..\..\..\omi\packet\definitions.hpp" />
     <ClInclude Include="..\..\..\omi\pcap\file.hpp" />
     <ClInclude Include="..\..\..\omi\pcap\frame.hpp" />
     <ClInclude Include="..\..\..\omi\pcap\header.hpp" />
@@ -160,6 +162,7 @@
     <ClInclude Include="..\..\..\omi\pcap\timestamp.hpp" />
     <ClInclude Include="..\..\..\omi\pcap\type.hpp" />
     <ClInclude Include="..\..\..\omi\pcap\version.hpp" />
+    <ClInclude Include="..\..\..\omi\udp\checksum.hpp" />
     <ClInclude Include="..\..\..\omi\udp\header.hpp" />
     <ClInclude Include="..\..\..\omi\udp\length.hpp" />
     <ClInclude Include="..\..\..\omi\udp\port.hpp" />

@@ -2,6 +2,7 @@
 #define OMI_PCAP_FRAME_HPP_
 
 #include <omi/pcap/timestamp.hpp>
+#include <omi/pcap/length.hpp>
 
 // Pcap frame
 
@@ -39,15 +40,6 @@ struct frame {
         return length.get() > 0;
     }
 
-    std::byte* payload() const {
-        return (std::byte *)(&*this) + sizeof(frame);
-    }
-
-    // Get address of next packet // move this out of here
-    std::byte* next() const {
-        return (std::byte *)(&*this) + size() + sizeof(frame);
-    }
-
 	// Advance byte stream
 	static void advance(std::byte* &buffer) {
 		buffer += sizeof(frame);
@@ -58,6 +50,17 @@ struct frame {
         const auto result = parse(buffer);
         buffer += sizeof(frame);
         return result;
+    }
+
+    // is this kind of thing useful?
+
+    std::byte* payload() const {
+        return (std::byte*)(&*this) + sizeof(frame);
+    }
+
+    // Get address of next packet // move this out of here
+    std::byte* next() const {
+        return (std::byte*)(&*this) + size() + sizeof(frame);
     }
 };
 

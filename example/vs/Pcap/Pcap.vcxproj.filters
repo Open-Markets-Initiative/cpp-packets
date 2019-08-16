@@ -115,9 +115,6 @@
     <ClInclude Include="..\..\..\omi\mac\address.hpp">
       <Filter>Header Files\mac</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\omi\definitions.hpp">
-      <Filter>Header Files\packet</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\omi\pcap\file.hpp">
       <Filter>Header Files\pcap</Filter>
     </ClInclude>
@@ -171,6 +168,18 @@
     </ClInclude>
     <ClInclude Include="..\..\..\omi\vlan\tci.hpp">
       <Filter>Header Files\vlan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\packet\definitions.hpp">
+      <Filter>Header Files\packet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\checksum.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\ipv4\type.hpp">
+      <Filter>Header Files\ipv4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\omi\udp\checksum.hpp">
+      <Filter>Header Files\udp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

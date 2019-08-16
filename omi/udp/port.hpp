@@ -4,7 +4,9 @@
 #include <cstdint>
 #include <ostream>
 
-// Udp Port
+#include <omi/byte/swap.hpp>
+
+// Udp port
 
 namespace omi::udp {
 
@@ -12,21 +14,23 @@ struct port {
     using type = std::uint16_t;
     static constexpr size_t size = sizeof(type);
 
-    type value; 
+    type data; 
 
   ///// Construction //////////////
 
     // Default constructor
     port()
-      : value{ 0 } {}
+      : data{ 0 } {}
 
     // Standard constructor
     explicit port(const type &value)
-      : value{ value } {}
+      : data{ value } {}
 
-    // Return underlying value
-    type get() const {
-        return value;
+  ///// Properties ////////////////
+
+    // Return port value
+    [[nodiscard]] type value() const {
+        return data;
     }
 
 };
@@ -35,18 +39,19 @@ struct port {
 
 // Stream operator
 inline std::ostream& operator<<(std::ostream& out, const port& port) {
-    return out << port;// todo
+    return out << port.value();
 }
 
 }
 
 namespace std {
 
-// std hash for udp port
 template<> 
 struct hash<omi::udp::port> {
+
+    // Hash for udp port
     size_t operator()(const omi::udp::port& port) const noexcept {
-        return std::hash<omi::udp::port::type>()(port.get());
+        return std::hash<omi::udp::port::type>()(port.value()); // might be better to use underlying value
     }
 };
 

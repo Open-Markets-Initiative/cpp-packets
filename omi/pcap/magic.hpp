@@ -3,14 +3,14 @@
 
 #include <cstdint>
 #include <ostream>
-#include <iso646.h>
+#include <iso646.h> // check build settings
 
 // Pcap file magic number
 
 namespace omi::pcap {
 
 struct magic {
-    using type = uint32_t;
+    using type = std::uint32_t;
 
     static constexpr type micros = 0xa1b2c3d4;
     static constexpr type nanos = 0xa1b23c4d;
@@ -19,45 +19,45 @@ struct magic {
 
     // Default constructor
     constexpr magic() noexcept
-      : value{ micros } {}
+      : data{ micros } {}
 
     // Standard constructor
     constexpr explicit magic(const type &value)
-      : value{ value } {}
+      : data{ value } {}
 
   ///// Methods ///////////////////
 
     // Return underlying value
-    [[nodiscard]] type get() const {
-        return value;
+    [[nodiscard]] type value() const {
+        return data;
     }
 
     // Is magic number valid?
     [[nodiscard]] bool valid() const {
-        return value == micros or value == nanos;
+        return data == micros or data == nanos;
     }
 
     // Are pcap timestamps in microseconds?
     [[nodiscard]] bool microseconds() const {
-        return value == micros ;
+        return data == micros ;
     }
 
     // Are pcap timestamps in nanoseconds?
     [[nodiscard]] bool nanoseconds() const {
-        return value == nanos;
+        return data == nanos;
     }
 
   //// Properties /////////////////
 
   protected:
-      type value;
+      type data;
 };
 
 ///////////////////////////////////////////////
 
 // Equals operator
 inline bool operator==(const magic& lhs, const magic& rhs) {
-    return lhs.get() == rhs.get();
+    return lhs.value() == rhs.value();
 }
 
 // Not equals operator

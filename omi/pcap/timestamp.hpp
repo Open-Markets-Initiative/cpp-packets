@@ -13,15 +13,23 @@ namespace omi::pcap {
 
 struct timestamp {
 
-  //// Member Variables ///////////
+    // this is all wrong
+
+  //// Fields ///////////
 
     uint32_t seconds;        // Seconds
     uint32_t microseconds;   // Microseconds
 
+  ///// Construction //////////////
+
+    // Default constructor
+    constexpr timestamp() noexcept
+        : seconds{ 0 }, microseconds{ 0 } {}
+
   //// Methods ////////////////////
 
     // Is timestamp valid?
-    bool valid() const {
+    [[nodiscard]] bool valid() const {
         return seconds != 0 or microseconds != 0;
     }
 
