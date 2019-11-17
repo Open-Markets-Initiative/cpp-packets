@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <ostream>
 
-// Pcap length/size
+// Pcap length in bytes
 
 namespace omi::pcap {
 

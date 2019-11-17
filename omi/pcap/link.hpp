@@ -7,7 +7,7 @@
 
 #include <omi/pcap/type.hpp>
 
-// Pcap file magic number
+// Pcap data link type
 
 namespace omi::pcap {
 

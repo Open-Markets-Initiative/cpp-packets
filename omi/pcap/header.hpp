@@ -6,7 +6,7 @@
 #include <omi/pcap/magic.hpp>
 #include <omi/pcap/version.hpp>
 #include <omi/pcap/length.hpp>
-#include <omi/pcap/timestamp.hpp>
+#include <omi/pcap/time.hpp>
 #include <omi/pcap/link.hpp>
 
 // Pcap file header
@@ -20,9 +20,9 @@ struct header {
   //// Fields ///////////////
 
     pcap::magic magic;             // Pcap identifier (also timestamp precision)
-    pcap::version version;         // Header version
-    pcap::timestamp timestamp;     // Usually unused (0)
-    pcap::length max;              // Max packet length 
+    pcap::version version;         // File version
+    pcap::time time;               // Usually unused (0)
+    pcap::length max;              // max length of captured packets, in octets
     pcap::link link;               // Link layer type
 
   //// Methods //////////////

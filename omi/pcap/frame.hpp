@@ -14,9 +14,9 @@ struct frame {
 
   //// Fields ///////////////
 
-    pcap::timestamp timestamp;
-    pcap::length length;
-    pcap::length packet;
+    pcap::timestamp timestamp; // frame timestamp
+    pcap::length length;       // number of octets of packet saved in file
+    pcap::length packet;       // actual length of packet
 
   //// Methods //////////////
 
@@ -31,12 +31,12 @@ struct frame {
     }
 
     // Return payload size in bytes
-    size_t size() const {
+    [[nodiscard]] size_t size() const {
         return length.get();
     }
 
     // Is packet valid?
-    size_t valid() const {
+    [[nodiscard]] size_t valid() const {
         return length.get() > 0;
     }
 
@@ -54,12 +54,12 @@ struct frame {
 
     // is this kind of thing useful?
 
-    std::byte* payload() const {
+    [[nodiscard]] std::byte* payload() const {
         return (std::byte*)(&*this) + sizeof(frame);
     }
 
     // Get address of next packet // move this out of here
-    std::byte* next() const {
+    [[nodiscard]] std::byte* next() const {
         return (std::byte*)(&*this) + size() + sizeof(frame);
     }
 };

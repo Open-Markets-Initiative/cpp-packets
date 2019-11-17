@@ -181,5 +181,8 @@
     <ClInclude Include="..\..\..\omi\udp\checksum.hpp">
       <Filter>Header Files\udp</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\omi\pcap\time.hpp">
+      <Filter>Header Files\pcap</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
